@@ -1,67 +1,81 @@
-DynamicProgramming_Algorithms
-This repository contains three Java programs that implement dynamic programming solutions for different algorithmic problems. Each program demonstrates efficient problem-solving techniques using memoization and tabulation to optimize performance.
+# Java Practical 4 - Term 2
 
-Files Overview
-1. Question1.java
-Purpose: Calculates Catalan numbers using dynamic programming with memoization.
+## Overview
+This repository contains three Java programs developed as part of **CSC212 2022 Practical 4 Term 2**. Each program implements different computational and algorithmic problems, including the **Catalan number sequence**, **coin change problem**, and **edit distance calculation for a word game**.
 
-Functionality: 
-Implements a recursive solution with memoization to compute Catalan numbers.
+---
 
-Reads input numbers from a CSV file and outputs the corresponding Catalan numbers.
+## Files Description
+### 1. `Question1.java`
+**Functionality:**
+- Implements a recursive approach with memoization to compute **Catalan numbers**.
+- Reads input from a CSV file (`catalan.csv`) containing integer values.
+- Outputs the corresponding **Catalan number** for each input value.
+- Uses a **top-down dynamic programming approach** to store previously computed results.
 
-Handles file not found exceptions.
+**How It Works:**
+- Reads input from `catalan.csv`.
+- Computes the **Catalan number** using the formula:
+  \[ C(n) = \sum_{i=0}^{n-1} C(i) * C(n-i-1) \]
+- Prints the result to the console.
 
-Key Features:
-Uses a memoization array to store previously computed results.
+**Error Handling:**
+- Handles `FileNotFoundException` if the input file is missing.
 
-Processes up to 10 numbers from the input file.
+---
 
-2. Question2.java
-Purpose: Computes the number of ways to make change for a given amount using specified coin denominations.
+### 2. `Question2.java`
+**Functionality:**
+- Implements a **dynamic programming approach** to solve the **coin change problem**.
+- Reads bill amount, tip amount, and amount received from `juice.csv`.
+- Computes the total amount required and determines the **number of ways to make change** using denominations `{1, 2, 5, 10, 20, 50, 100, 200}`.
 
-Functionality:
-Uses dynamic programming to calculate combinations of coins that sum to a target amount.
+**How It Works:**
+- Reads input values from `juice.csv`.
+- Uses a **bottom-up approach** to determine the number of ways to make change.
+- Outputs the computed number of ways to give the required change.
 
-Reads bill, tip, and received amounts from a CSV file.
+**Error Handling:**
+- Handles `FileNotFoundException` if the input file is missing.
 
-Outputs the number of ways to make change for the calculated amount.
+---
 
-Key Features:
-Supports coin denominations: 1, 2, 5, 10, 20, 50, 100, 200.
+### 3. `Question3.java`
+**Functionality:**
+- Implements a **word game** where the user guesses words from predefined categories.
+- Uses **edit distance (Levenshtein distance)** to determine how close an incorrect answer is to the correct one.
+- Stores the user's name and **final score** in a dynamically created `.txt` file.
 
-Handles file not found exceptions.
+**How It Works:**
+- Prompts the user for their name (creates a file `username.txt`).
+- Presents **10 rounds** of different categories (Animals, Football, Clothing Brands, etc.).
+- Evaluates the user's guesses and calculates their **edit distance** from the correct answer.
+- Saves the final score in `username.txt`.
 
-3. Question3.java
-Purpose: Implements a quiz game that calculates edit distances between user answers and correct answers.
+**Error Handling:**
+- Handles `IOException` for file operations.
 
-Functionality:
-Uses dynamic programming to compute the Levenshtein edit distance between strings.
+---
 
-Runs a 10-round quiz across various categories (e.g., Animal, Football).
+## Setup and Execution
+### Prerequisites
+- Java Development Kit (JDK 8 or later)
+- A Java-compatible IDE (e.g., IntelliJ IDEA, Eclipse, or VS Code)
 
-Allows up to three attempts per question and tracks the score based on edit distances.
+### Compilation & Execution
+1. Compile the Java files:
+   ```sh
+   javac Question1.java Question2.java Question3.java
+   ```
+2. Run the programs individually:
+   ```sh
+   java Question1
+   ```
+   ```sh
+   java Question2
+   ```
+   ```sh
+   java Question3
+   ```
 
-Writes the final score to a user-specific text file.
-
-Key Features:
-Categories include Animals, Football, Clothing Brands, etc.
-
-Handles file creation and writing exceptions.
-
-Software Engineering Practices
-Dynamic Programming: All three programs use dynamic programming to optimize solutions by breaking problems into subproblems and storing results.
-
-Error Handling: Each program includes try-catch blocks to handle file-related exceptions.
-
-Modularity: Code is organized into classes and methods for better readability and maintainability.
-
-File I/O: Programs demonstrate reading from CSV files and writing to text files.
-
-Requirements
-Java Development Kit (JDK) installed.
-
-CSV files (catalan.csv, juice.csv) placed in the specified directory paths (modify paths as needed).
-
-Write permissions for creating text files (for Question3).
-
+---
