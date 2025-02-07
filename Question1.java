@@ -9,13 +9,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-/**
- * Ntshangase
- * Ntokozo
- * 4123601
- * CSC212 2022 Practical 4 Term 2
- * Question1.java
- */
 public class Question1 
 {
     //creating array to store
