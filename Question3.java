@@ -10,13 +10,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
- * Ntshangase
- * Ntokozo
- * 4123601
- * CSC212 2022 Practical 4 Term 2
- * Question3.java
- */
 public class Question3 
 {
     //method to find minimun distance
