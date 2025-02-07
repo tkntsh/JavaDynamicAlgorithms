@@ -10,13 +10,6 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- * Ntshangase
- * Ntokozo
- * 4123601
- * CSC212 2022 Practical 4 Term 2
- * Question2.java
- */
 public class Question2 
 {
     //method to figure out change required
